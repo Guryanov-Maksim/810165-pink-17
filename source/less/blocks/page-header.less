@@ -17,3 +17,69 @@
   line-height: 28px;
   color: #ffffff;
 }
+
+.page-header__toggle--open-menu {
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 16px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-top: 6px solid #283645;
+  border-bottom: 6px solid #283645;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  content: "";
+  &::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+}
+
+.page-header__toggle--close-menu {
+  display: flex;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: -1px;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: -1px;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    transform: rotate(-45deg);
+  }
+}
+

@@ -22,20 +22,30 @@
   display: flex;
   position: relative;
   width: 50px;
-  height: 16px;
+  height: 24px;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  border-top: 6px solid rgba(#000000, 30%);
-  border-bottom: 6px solid rgba(#000000, 30%);
-  border-left: none;
-  border-right: none;
+  background: none;
+  border: none;
+  // box-sizing: border-box;
+  // background-color: #ffffff;
+  // border-top: 6px solid rgba(#000000, 30%);
+  // border-bottom: 6px solid rgba(#000000, 30%);
+  // border-left: none;
+  // border-right: none;
   cursor: pointer;
-  content: "";
+  .page-header__toggle--line {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: #ffffff;
+  }
   &::before {
     position: absolute;
     content: "";
-    top: -10px;
+    top: 0px;
     left: 0;
     width: 50px;
     height: 4px;
@@ -44,13 +54,15 @@
   &::after {
     position: absolute;
     content: "";
-    top: 10px;
+    top: 20px;
     left: 0;
     width: 50px;
     height: 4px;
     background-color: #ffffff;
   }
 }
+
+
 
 .page-header__toggle--close-menu {
   display: flex;
@@ -61,6 +73,9 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  .page-header__toggle--line {
+    display: none;
+  }
   &::before {
     position: absolute;
     content: "";

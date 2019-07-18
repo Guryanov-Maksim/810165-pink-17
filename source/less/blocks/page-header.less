@@ -30,6 +30,7 @@
   background: none;
   border: none;
   cursor: pointer;
+
   .page-header__toggle--line {
     position: absolute;
     content: "";
@@ -39,15 +40,17 @@
     height: 4px;
     background: #ffffff;
   }
+
   &::before {
     position: absolute;
     content: "";
-    top: 0px;
+    top: 0;
     left: 0;
     width: 50px;
     height: 4px;
     background-color: #ffffff;
   }
+
   &::after {
     position: absolute;
     content: "";
@@ -68,9 +71,11 @@
   border: none;
   background: transparent;
   cursor: pointer;
+
   .page-header__toggle--line {
     display: none;
   }
+
   &::before {
     position: absolute;
     content: "";
@@ -81,6 +86,7 @@
     background-color: #ffffff;
     transform: rotate(45deg);
   }
+
   &::after {
     position: absolute;
     content: "";

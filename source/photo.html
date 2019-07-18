@@ -118,28 +118,28 @@
       <section class="app">
         <h2 class="visually-hidden">Приложение Pink в режиме online</h2>
         <p class="app__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-        <form class="app__form" method="get" action="https://echo.htmlacademy.ru">
+        <form class="app__form" method="post" action="https://echo.htmlacademy.ru">
           <img class="app__image" src="http://placehold.it/280x374" alt="Ваше фото для обработки">
-          <p class="app__cut">
+          <div class="app__cut">
             <button class="app__control-button app__control-button--cut app__control-button--active" type="button">
               <span class="visually-hidden">Обрезка</span>
             </button>
             <input class="app__slide app__slide--active" type="range" min="1" max="100">
-          </p>
-          <p class="app__fill">
+          </div>
+          <div class="app__fill">
             <button class="app__control-button app__control-button--fill" type="button">
               <span class="visually-hidden">Заливка</span>
             </button>
             <input class="app__slide" type="range" min="1" max="100">
-          </p>
-          <p class="app__contrast">
+          </div>
+          <div class="app__contrast">
             <button class="app__control-button app__control-button--contrast" type="button">
               <span class="visually-hidden">Контрастность</span>
             </button>
             <input class="app__slide" type="range" min="1" max="100">
-          </p>
+          </div>
           <button class="app__button" type="submit">Запостить</button>
-          <input class="app__button" type="reset" value="Сбросить">
+          <button class="app__button" type="reset">Сбросить</button>
         </form>
       </section>
     </main>

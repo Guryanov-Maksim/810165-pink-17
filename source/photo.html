@@ -3,29 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип приложения Pink">
-      </a>
-      <button class="page-header__toggle" type="button">Открыть меню</button>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a>Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__inner page-header__inner--opened-menu">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип приложения Pink">
+        </a>
+        <button class="page-header__toggle hamburger-button hamburger-button--close-menu" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="hamburger-button__line"></span>
+        </button>
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <h1 class="page-header__title">Фотографии пользователей</h1>
     </header>
     <main class="page-main">
@@ -115,28 +121,28 @@
       <section class="app">
         <h2 class="visually-hidden">Приложение Pink в режиме online</h2>
         <p class="app__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-        <form class="app__form" method="get" action="https://echo.htmlacademy.ru">
+        <form class="app__form" method="post" action="https://echo.htmlacademy.ru">
           <img class="app__image" src="http://placehold.it/280x374" alt="Ваше фото для обработки">
-          <p class="app__cut">
+          <div class="app__cut">
             <button class="app__control-button app__control-button--cut app__control-button--active" type="button">
               <span class="visually-hidden">Обрезка</span>
             </button>
             <input class="app__slide app__slide--active" type="range" min="1" max="100">
-          </p>
-          <p class="app__fill">
+          </div>
+          <div class="app__fill">
             <button class="app__control-button app__control-button--fill" type="button">
               <span class="visually-hidden">Заливка</span>
             </button>
             <input class="app__slide" type="range" min="1" max="100">
-          </p>
-          <p class="app__contrast">
+          </div>
+          <div class="app__contrast">
             <button class="app__control-button app__control-button--contrast" type="button">
               <span class="visually-hidden">Контрастность</span>
             </button>
             <input class="app__slide" type="range" min="1" max="100">
-          </p>
+          </div>
           <button class="app__button" type="submit">Запостить</button>
-          <input class="app__button" type="reset" value="Сбросить">
+          <button class="app__button" type="reset">Сбросить</button>
         </form>
       </section>
     </main>

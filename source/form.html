@@ -3,29 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип приложения Pink">
-      </a>
-      <button class="page-header__toggle" type="button">Открыть меню</button>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a>Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__inner page-header__inner--opened-menu">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип приложения Pink">
+        </a>
+        <button class="page-header__toggle hamburger-button hamburger-button--close-menu" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="hamburger-button__line"></span>
+        </button>
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </header>
     <main class="page-main">
@@ -34,7 +40,7 @@
         <p class="competition__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
           <span class="competition__subtext visually-hidden"> Пожалуйста, заполните форму ниже:</span>
         </p>
-        <form class="competition__form form-set" method="get" action="https://echo.htmlacademy.ru">
+        <form class="competition__form form-set" method="post" action="https://echo.htmlacademy.ru">
           <p class="form-set__field">
             <input class="form-set__input" type="text" name="surname" placeholder="Укажите фамилию *" id="text-1" required>
             <label class="form-set__label" for="text-1">Фамилия</label>
@@ -50,27 +56,27 @@
           <fieldset class="form-set__fieldset">
             <legend class="form-set__caption">Ваши безбашенные достижения в путешествии</legend>
             <p class="form-set__field">
-              <input class="form-set__input--checkbox" type="checkbox" name="shark-selfie" id="checkbox-1" checked>
+              <input class="form-set__checkbox" type="checkbox" name="shark-selfie" id="checkbox-1" checked>
               <label class="form-set__label" for="checkbox-1">Сделал селфи с акулой</label>
             </p>
             <p class="form-set__field">
-              <input class="form-set__input--checkbox" type="checkbox" name="beach-burn" id="checkbox-2" checked>
+              <input class="form-set__checkbox" type="checkbox" name="beach-burn" id="checkbox-2" checked>
               <label class="form-set__label" for="checkbox-2">Обгорел на пляже</label>
             </p>
             <p class="form-set__field">
-              <input class="form-set__input--checkbox" type="checkbox" name="chuck-norris" id="checkbox-3">
+              <input class="form-set__checkbox" type="checkbox" name="chuck-norris" id="checkbox-3">
               <label class="form-set__label" for="checkbox-3">Видел Чака Норриса</label>
             </p>
             <p class="form-set__field">
-              <input class="form-set__input--checkbox" type="checkbox" name="souvenir-buyer" id="checkbox-4">
+              <input class="form-set__checkbox" type="checkbox" name="souvenir-buyer" id="checkbox-4">
               <label class="form-set__label" for="checkbox-4">Накупил сувениров</label>
             </p>
             <p class="form-set__field">
-              <input class="form-set__input--checkbox" type="checkbox" name="tower-holder" id="checkbox-5" checked>
+              <input class="form-set__checkbox" type="checkbox" name="tower-holder" id="checkbox-5" checked>
               <label class="form-set__label" for="checkbox-5">Удержал башню</label>
             </p>
             <p class="form-set__field">
-              <input class="form-set__input--checkbox" type="checkbox" name="hotel-distroyer" id="checkbox-6">
+              <input class="form-set__checkbox" type="checkbox" name="hotel-distroyer" id="checkbox-6">
               <label class="form-set__label" for="checkbox-6">Разгромил отель</label>
             </p>
           </fieldset>
@@ -85,15 +91,15 @@
           <fieldset class="form-set__fieldset">
             <legend class="form-set__caption">С каким приложением путешествовали?</legend>
             <p class="form-set__field">
-              <input class="form-set__input--radio" type="radio" name="os-type" value="ios" id="radio-1" checked>
+              <input class="form-set__radio" type="radio" name="os-type" value="ios" id="radio-1" checked>
               <label class="form-set__label" for="radio-1">Pink для iOS</label>
             </p>
             <p class="form-set__field">
-              <input class="form-set__input--radio" type="radio" name="os-type" value="android" id="radio-2">
+              <input class="form-set__radio" type="radio" name="os-type" value="android" id="radio-2">
               <label class="form-set__label" for="radio-2">Pink на Android</label>
             </p>
             <p class="form-set__field">
-              <input class="form-set__input--radio" type="radio" name="os-type" value="windows-phone" id="radio-3">
+              <input class="form-set__radio" type="radio" name="os-type" value="windows-phone" id="radio-3">
               <label class="form-set__label" for="radio-3">Pink на Android</label>
             </p>
           </fieldset>
@@ -101,7 +107,7 @@
             <label class="form-set__label" for="textarea-1">Опишите свои эмоции</label>
             <textarea class="form-set__textarea" name="letter" placeholder="Можно прям в красках, не стесняясь в выражениях" id="textarea-1"></textarea>
           </p>
-          <button class="form__button" type="submit">Отправить форму</button>
+          <button class="form-set__button" type="submit">Отправить форму</button>
         </form>
         <small class="competition__legend">* — обязательные поля</small>
       </section>

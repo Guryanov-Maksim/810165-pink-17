@@ -12,3 +12,14 @@
   text-transform: uppercase;
   background-color: @base-color;
 }
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .site-list__link {
+    background-color: transparent;
+  }
+}

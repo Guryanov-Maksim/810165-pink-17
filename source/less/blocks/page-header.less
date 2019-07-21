@@ -7,17 +7,14 @@
 }
 
 .page-header__wrapper {
-  display: flex;
+  .mobile-wrapper();
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
-    width: 620px;
+    .tablet-wrapper();
   }
 }
 
@@ -37,7 +34,6 @@
   }
 
   .page-header__wrapper {
-    width: 940px;
-    padding: 0 10px;
+    .desktop-wrapper();
   }
 }

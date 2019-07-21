@@ -1,22 +1,39 @@
-
-.page-header {
-  background-color: @base-color;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.page-header__inner--closed-menu {
+.page-header--closed-menu {
   background: rgba(#000000, 30%);
 }
 
-.page-header__inner--opened-menu {
+.page-header--opened-menu {
   background: @base-color;
 }
 
-.page-header__title {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 28px;
-  color: #ffffff;
+.page-header__wrapper {
+  .mobile-wrapper();
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    .tablet-wrapper();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -32px;
+  }
+
+  .page-header--opened-menu {
+    background: rgba(#000000, 30%);
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__wrapper {
+    .desktop-wrapper();
+  }
 }

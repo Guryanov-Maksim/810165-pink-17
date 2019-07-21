@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__inner page-header__inner--opened-menu">
+    <header class="page-header page-header--opened-menu">
+      <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип приложения Pink">
         </a>
@@ -32,14 +33,20 @@
           </ul>
         </nav>
       </div>
-      <h1 class="page-header__title">Фотографии пользователей</h1>
     </header>
     <main class="page-main">
+      <div class="page-main__bg-wrapper">
+        <div class="page-main__inner">
+          <h1 class="page-main__title">Фотографии пользователей</h1>
+        </div>
+      </div>
       <section class="photos">
         <h2 class="visually-hidden">Фотографии с комментариями</h2>
-        <p class="photos__discription">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="photos__text-wrapper">
+          <p class="photos__discription">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
         <ul class="photos__list">
-          <li class="photos__item">
+          <li class="photos__item photos__item--panorama">
             <blockquote class="photos__user-post">
               <a href="#" class="photos__link">
                 <img class="photos__user-photo photos__user-photo--panorama" src="http://placehold.it/320x137" alt="Крутой трамплин">

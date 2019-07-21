@@ -1,7 +1,10 @@
 .page-footer {
-  z-index: -1;
   .mobile-wrapper();
   flex-direction: column;
+}
+
+.page-footer--visibility {
+  display: none;
 }
 
 .page-footer__logo {
@@ -23,6 +26,7 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     .tablet-wrapper();
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }

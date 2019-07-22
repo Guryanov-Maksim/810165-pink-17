@@ -12,6 +12,10 @@
     content: "";
     background-color: #ffffff;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .hamburger-button--open-menu {
@@ -67,11 +71,5 @@
     height: 4px;
     background-color: #ffffff;
     transform: rotate(-45deg);
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .hamburger-button {
-    display: none;
   }
 }

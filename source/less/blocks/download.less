@@ -3,6 +3,15 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 32px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
 }
 
 .download__wrapper {
@@ -10,6 +19,19 @@
   position: relative;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+  }
 }
 
 .download__title {
@@ -19,16 +41,54 @@
   font-weight: 300;
   line-height: 28px;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+  }
+}
+
+.download__photo-example {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 20px;
+  }
 }
 
 .download__bg-wrapper {
   background: @base-color;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+  }
 }
 
 .download__inner {
   .mobile-wrapper();
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+}
+
+.download__button {
+  @media (min-width: @tablet-width) {
+    background: transparent;
+  }
 }
 
 .download__list {
@@ -43,54 +103,8 @@
   font-weight: 300;
   color: #ffffff;
   background: @base-color;
-}
 
-@media (min-width: @tablet-width) {
-  .download {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-  }
-
-  .download__photo-example {
-    position: absolute;
-    top: 0;
-    right: 20px;
-  }
-
-  .download__wrapper,
-  .download__bg-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    width: 620px;
-    margin: 0 auto;
-    padding: 0 20px;
+  @media (min-width: @tablet-width) {
     background: transparent;
-  }
-
-  .download__title {
-    align-self: flex-start;
-  }
-
-  .download__inner {
-    width: 300px;
-    margin: 0;
-    padding: 0;
-    background: transparent;
-  }
-
-  .download__button,
-  .download__available-os {
-    background: transparent;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .download {
-    padding-top: 32px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-  }
-
-  .download__wrapper,
-  .download__bg-wrapper {
-    .desktop-wrapper();
   }
 }

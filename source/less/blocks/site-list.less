@@ -28,6 +28,9 @@
 }
 
 .site-list__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   font-weight: bold;
   line-height: 32px;
@@ -37,7 +40,36 @@
 
   @media (min-width: @desktop-width) {
     font-weight: normal;
-    text-transform: initial;
+    text-transform: inherit;
     background-color: transparent;
+  }
+}
+
+.site-list__link[href] {
+  &:hover,
+  &:focus {
+    color: rgba(210, 80, 46, 1);
+  }
+
+  &:active {
+    color: rgba(210, 80, 46, 0.3);
+
+    @media(min-width: @desktop-width) {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.site-list__link:not([href]) {
+  &::before {
+    @media(min-width: @desktop-width) {
+      position: absolute;
+      content: "";
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #ffffff;
+    }
   }
 }

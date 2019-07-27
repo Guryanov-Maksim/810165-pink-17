@@ -1,4 +1,7 @@
 .page-header {
+  position: relative;
+  z-index: 2;
+
   @media (min-width: @desktop-width) {
     position: relative;
     z-index: 2;
@@ -9,6 +12,70 @@
 
 .page-header--closed-menu {
   background: rgba(#000000, 30%);
+  margin-bottom: -70px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -110px;
+    padding-bottom: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: -150px;
+    padding-bottom: 39px;
+  }
+}
+
+.page-header--closed-menu .main-nav {
+  display: none;
+
+  @media(min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-header--closed-menu + .page-main .download {
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+    background-position: -271px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 150px;
+  }
+}
+
+.page-header--closed-menu + .page-main .download__bg-container {
+  padding-top: 70px;
+  background-position: 0 2px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.page-header--closed-menu .page-header__inner {
+  padding-bottom: 22px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 43px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
+}
+
+.page-header--closed-menu .page-header__toggle {
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 16px;
+  }
 }
 
 .page-header--opened-menu {
@@ -34,8 +101,8 @@
   .mobile-wrapper();
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 21px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #000000;
 
   @media (min-width: @tablet-width) {
@@ -53,10 +120,12 @@
 }
 
 .page-header__logo {
-  margin-top: 3px;
+  width: 75px;
+  height: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 0;
+    width: 147px;
+    height: 40px;
   }
 }
 
@@ -64,18 +133,9 @@
   display: none;
 }
 
-.page-header--closed-menu .main-nav {
-  display: none;
-}
-
-// .page-header__inner {
-//   display: flex;
-//   justify-content: space-between;
-//   width: 100%;
-//   padding-top: 22px;
-// }
-
 .page-header__toggle {
+  margin-top: -3px;
+
   @media (min-width: @tablet-width) {
     margin-top: 15px;
   }

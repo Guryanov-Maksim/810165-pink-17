@@ -8,14 +8,16 @@
   </head>
   <body>
     <header class="page-header page-header--opened-menu page-header--nojs">
+    <!-- <header class="page-header page-header--closed-menu"> -->
       <div class="page-header__wrapper">
         <div class="page-header__inner">
           <a class="page-header__logo" href="index.html">
             <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" width="75" heigth="22" alt="Логотип приложения Pink">
           </a>
-          <button class="page-header__toggle hamburger-button hamburger-button--close-menu" type="button">
+          <!-- <button class="page-header__toggle hamburger-button hamburger-button--close-menu" type="button"> -->
+          <button class="page-header__toggle hamburger-button hamburger-button--open-menu" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <span class="hamburger-button__line"></span>
+            <!-- <span class="hamburger-button__line"></span> -->
           </button>
         </div>
         <nav class="main-nav">
@@ -79,11 +81,11 @@
             <li class="advantages__item">
               <h3 class="advantages__certain-advantage">Поднимает настроение</h3>
               <p class="advantages__discription">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              <img class="advantages__example" src="http://placehold.it/157x320" alt="Пример оформления фотографии в серых тонах" >
+              <img class="advantages__example" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Пример оформления фотографии в серых тонах" >
             </li>
             <li class="advantages__item">
               <h3 class="advantages__certain-advantage">Меняет мир вокруг</h3>
-              <p class="advantages__discription">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <p class="advantages__discription">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br> усилить эффект</p>
               <img class="advantages__example" src="http://placehold.it/157x320" alt="Пример оформления фотографии розовым фоном" >
             </li>
             <li class="advantages__item">
@@ -96,29 +98,31 @@
       </section>
       <section class="research">
         <div class="research__wrapper">
-          <h2 class="research__title">Эффект на 24 часа!</h2>
-          <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <h2 class="research__title">Эффект<br> на 24 часа!</h2>
+          <p class="research__text">Британские ученые провели исследования и доказали, <br>что положительный эффект<br> от использования приложения длится целые сутки!</p>
           <a class="research__link" href="#">Узнать больше об исследовании</a>
         </div>
       </section>
       <section class="reviews">
-        <h2 class="visually-hidden">Отзывы наших пользователей</h2>
-        <ul class="reviews__list">
-          <li class="reviews__item">
-            <blockquote class="reviews__post post">
-              <cite class="post__author-name">Николай Петров</cite>
-              <small class="post__personal-data">25 лет, водитель трамвая</small>
-              <p class="post__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-          </li>
-        </ul>
-        <p class="reviews__toggles toggles">
-          <button class="toggles__arrow-toggle toggles__arrow-toggle--prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
-          <button class="toggles__toggle toggles__toggle--active" type="button"><span class="visually-hidden">1</span></button>
-          <button class="toggles__toggle" type="button"><span class="visually-hidden">2</span></button>
-          <button class="toggles__toggle toggles__toggle--last" type="button"><span class="visually-hidden">3</span></button>
-          <button class="toggles__arrow-toggle toggles__arrow-toggle--next" type="button"><span class="visually-hidden">Следующий</span></button>
-        </p>
+        <div class="reviews__wrapper">
+          <h2 class="visually-hidden">Отзывы наших пользователей</h2>
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <blockquote class="reviews__post post">
+                <cite class="post__author-name">Николай Петров</cite>
+                <small class="post__personal-data">25 лет, водитель трамвая</small>
+                <p class="post__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+            </li>
+          </ul>
+          <p class="reviews__toggles toggles">
+            <button class="toggles__arrow-toggle toggles__arrow-toggle--prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
+            <button class="toggles__toggle toggles__toggle--active" type="button"><span class="visually-hidden">1</span></button>
+            <button class="toggles__toggle" type="button"><span class="visually-hidden">2</span></button>
+            <button class="toggles__toggle toggles__toggle--last" type="button"><span class="visually-hidden">3</span></button>
+            <button class="toggles__arrow-toggle toggles__arrow-toggle--next" type="button"><span class="visually-hidden">Следующий</span></button>
+          </p>
+        </div>
       </section>
       <section class="prices">
         <ul class="prices__list">
@@ -181,32 +185,32 @@
     </main>
     <footer class="page-footer page-footer--visibility">
       <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="http://placehold.it/147x40" alt="Логотип Pink">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Pink">
       </a>
       <ul class="page-footer__list">
         <li class="page-footer__item">
           <a href="#" class="page-footer__social">
             <span class="visually-hidden">Мы в Twitter</span>
-            <img class="page-footer__social-logo" src="http://placehold.it/18x14" alt="Логотип Twitter">
+            <img class="page-footer__social-logo" src="img/icon-twitter.svg" width="18" height="14" alt="Логотип Twitter">
           </a>
         </li>
         <li class="page-footer__item">
           <a href="#" class="page-footer__social">
             <span class="visually-hidden">Мы на Facebook</span>
-            <img class="page-footer__social-logo" src="http://placehold.it/9x18" alt="Логотип Facebook">
+            <img class="page-footer__social-logo" src="img/icon-facebook.svg" width="9" height="18" alt="Логотип Facebook">
           </a>
         </li>
         <li class="page-footer__item">
           <a href="#" class="page-footer__social">
             <span class="visually-hidden">Мы на YouTube</span>
-            <img class="page-footer__social-logo" src="http://placehold.it/15x13" alt="Логотип YouTube">
+            <img class="page-footer__social-logo" src="img/icon-youtube.svg" width="15" height="13" alt="Логотип YouTube">
           </a>
         </li>
       </ul>
       <p class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo" src="http://placehold.it/27x34" alt="Логотип HTML Academy">
+          <img class="copyright__logo" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </p>
     </footer>

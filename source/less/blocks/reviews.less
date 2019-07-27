@@ -1,9 +1,28 @@
 .reviews {
+  margin-bottom: 40px;
+  background: #ffffff;
+
+
+  @media (min-width: @tablet-width) {
+    // .tablet-wrapper();
+    // padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    // .desktop-wrapper();
+  }
+}
+
+.reviews__wrapper {
   .mobile-wrapper();
   position: relative;
   flex-direction: column;
+  padding-top: 42px;
+  background: #ffffff;
+
   @media (min-width: @tablet-width) {
     .tablet-wrapper();
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {

@@ -10,7 +10,7 @@
   height: 12px;
   margin-right: 13px;
   padding: 0;
-  background: #bec2c7;
+  background-color: rgba(40, 54, 69, 0.3);
   border: 3px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
@@ -26,6 +26,19 @@
   &--active {
     background: #ffffff;
     border-color: @base-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+
+  &--active:hover {
+    background: #ffffff;
   }
 }
 

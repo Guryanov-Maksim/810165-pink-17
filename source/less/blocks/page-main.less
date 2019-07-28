@@ -11,7 +11,7 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 -66px;
-  // background-size: cover;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 94px;
@@ -19,6 +19,7 @@
     padding-bottom: 140px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: -270px -111px;
+    background-size: auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -72,5 +73,11 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 142px;
+  }
+}
+
+.page-main__title--wider {
+  @media (min-width: @desktop-width) {
+    padding: 0 80px;
   }
 }

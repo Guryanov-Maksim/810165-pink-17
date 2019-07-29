@@ -1,8 +1,35 @@
 .download {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 41px;
+  background-color: @base-color;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: -270px -111px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+    padding-top: 110px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: -680px 0;
+    background-size: cover;
+  }
+}
+
+.download__bg-container {
   background-color: @base-color;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 0 -67px;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
 }
 
 .download__wrapper {
@@ -10,54 +37,68 @@
   position: relative;
   flex-direction: column;
   align-items: center;
+  padding-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 93px;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    padding-top: 107px;
+  }
 }
 
 .download__title {
   max-width: 300px;
   margin: 0;
+  margin-bottom: 31px;
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
   color: #ffffff;
-}
+  text-align: center;
+  box-sizing: border-box;
 
-.download__bg-wrapper {
-  background: @base-color;
-}
-
-.download__inner {
-  .mobile-wrapper();
-  flex-direction: column;
-  align-items: center;
-}
-
-.download__list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.download__available-os {
-  margin: 0;
-  font-weight: 300;
-  color: #ffffff;
-  background: @base-color;
-}
-
-@media (min-width: @tablet-width) {
-  .download {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+    max-width: 300px;
+    margin-right: 320px;
+    padding: 0 27px;
+    font-size: 40px;
+    line-height: 48px;
   }
 
-  .download__photo-example {
+  @media (min-width: @desktop-width) {
+    margin-right: 640px;
+    margin-bottom: 52px;
+    padding: 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+.download__photo-example {
+  margin-bottom: 88px;        //временно, пока нет графики
+
+  @media (min-width: @tablet-width) {
     position: absolute;
     top: 0;
     right: 20px;
   }
+}
 
-  .download__wrapper,
-  .download__bg-wrapper {
+.download__bg-wrapper {
+  padding-top: 28px;
+  background: #1d2631;
+
+  @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-start;
     width: 620px;
@@ -66,31 +107,86 @@
     background: transparent;
   }
 
-  .download__title {
-    align-self: flex-start;
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
   }
+}
 
-  .download__inner {
+.download__inner {
+  .mobile-wrapper();
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
     width: 300px;
     margin: 0;
     padding: 0;
     background: transparent;
   }
+}
 
-  .download__button,
-  .download__available-os {
+.download__button {
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+    padding: 15px 45px 17px;
     background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+    padding: 13px 28px 15px;
+    font-size: 21px;
+    line-height: 21px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .download {
-    padding-top: 32px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
+.download__list {
+  display: flex;
+  justify-content: space-between;
+  width: 205px;
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
   }
 
-  .download__wrapper,
-  .download__bg-wrapper {
-    .desktop-wrapper();
+  @media (min-width: @desktop-width) {
+    margin-bottom: 49px;
+  }
+}
+
+.download__item {
+  &:nth-child(2) {
+    margin-top: 7px;
+  }
+
+  &:nth-child(3) {
+    margin-top: 11px;
+  }
+}
+
+.download__available-os {
+  max-width: 280px;
+  margin: 0;
+  margin-bottom: 31px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  background: #1d2631;
+
+  @media (min-width: @tablet-width) {
+    max-width: 300px;
+    margin-bottom: 110px;
+    font-size: 18px;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 122px;
   }
 }

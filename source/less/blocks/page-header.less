@@ -36,17 +36,28 @@
 .page-header--closed-menu + .page-main .download {
   @media (min-width: @tablet-width) {
     padding-top: 110px;
-    background-position: -271px 0;
+    background-position: center 0;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 150px;
+    background-position: center 40px;
+  }
+
+  @media (min-width: @desktop-width) and (min-resolution: @retina-dpi),
+         (min-width: @desktop-width) and (min-resolution: @retina-dppx) {
+    background-position: center 51px;
   }
 }
 
 .page-header--closed-menu + .page-main .download__bg-container {
   padding-top: 70px;
-  background-position: 0 2px;
+  background-position: center 2px;
+
+  @media (max-width: @tablet-width) and (min-resolution: @retina-dpi),
+         (max-width: @tablet-width) and (min-resolution: @retina-dppx) {
+    background-position: center 0;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 110px;

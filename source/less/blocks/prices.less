@@ -1,0 +1,141 @@
+.prices {
+  background-color: #f2f2f2;
+}
+
+.prices__wrapper {
+  .mobile-wrapper();
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+  }
+}
+
+.prices__table {
+  display: flex;
+  width: 100%;
+  // border-collapse: collapse;
+}
+
+.prices__table tr {
+  display: flex;
+}
+
+.prices__table td {
+  display: flex;
+  width: 155px;
+  padding: 6px 15px 9px;
+  box-sizing: border-box;
+  // font-size: 14px;
+  // font-weight: 300;
+  line-height: 30px;
+  // color: #ffffff;
+  // text-transform: uppercase;
+  // text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  // border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+// .prices__table tbody {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .prices__packet-names {
+//   display: flex;
+// }
+
+.prices__packet-names td {
+  flex-direction: column;
+  width: 155px;
+  padding: 12px 10px 9px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  border-collapse: collapse;
+  background-color: #283645;
+}
+
+.prices__packet-names b {
+  display: block;
+  margin-bottom: -2px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.prices__packet-names td:nth-child(1) {
+  background: none;
+  border-color: transparent;
+}
+
+.prices__packet-names td:nth-child(4) {
+  border-right-color: #283645;
+}
+
+.prices__yes {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 61px;
+    width: 30px;
+    height: 17px;
+    box-sizing: border-box;
+    border: 3px solid #3dc644;
+    border-radius: 1px;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.prices__no {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: 59px;
+    width: 38px;
+    height: 3px;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    background: #f25b26;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: 59px;
+    width: 38px;
+    height: 3px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background: #f25b26;
+  }
+}
+
+// .prices__packet-names td:nth-child(2) {
+//   padding: 12px 37px;
+// }
+
+// .prices__packet-names td:nth-child(3) {
+//   padding: 12px 26px;
+// }
+
+// .prices__packet-names td:nth-child(4) {
+//   padding: 12px 35px;
+// }
+

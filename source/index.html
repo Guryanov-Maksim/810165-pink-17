@@ -122,7 +122,44 @@
         </div>
       </section>
       <section class="prices">
-        <ul class="prices__list">
+        <div class="prices__wrapper">
+          <table class="prices__table">
+            <tr class="prices__packet-names">
+              <td></td>
+              <td>
+                <b>База</b>
+                1,99 USD
+              </td>
+              <td>
+                <b>Стандарт</b>
+                3,99 USD
+              </td>
+              <td>
+                <b>Анлим</b>
+                9,99 USD
+              </td>
+            </tr>
+            <tr>
+              <td>Розовый фильтр</td>
+              <td class="prices__yes"><span class="visually-hidden">Да</span></td>
+              <td class="prices__yes"><span class="visually-hidden">Да</span></td>
+              <td class="prices__yes"><span class="visually-hidden">Да</span></td>
+            </tr>
+            <tr>
+              <td>Смайлики</td>
+              <td class="prices__no"><span class="visually-hidden">Нет</span></td>
+              <td class="prices__yes"><span class="visually-hidden">Да</span></td>
+              <td class="prices__yes"><span class="visually-hidden">Да</span></td>
+            </tr>
+            <tr>
+              <td>Комментарии</td>
+              <td class="prices__no"><span class="visually-hidden">Нет</span></td>
+              <td class="prices__no"><span class="visually-hidden">Нет</span></td>
+              <td class="prices__yes"><span class="visually-hidden">Да</span></td>
+            </tr>
+          </table>
+        </div>
+        <!-- <ul class="prices__list">
           <li class="prices__item">
             <h3 class="prices__package-name">База</h3>
             <p class="prices__cost">1,99 USD</p>
@@ -150,11 +187,11 @@
               <li class="prices__app-option">Комментарии</li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
         <p class="prices__toggles toggles">
-          <button class="toggles__toggle" type="button">1</button>
-          <button class="toggles__toggle" type="button">2</button>
-          <button class="toggles__toggle" type="button">3</button>
+          <button class="toggles__toggle" type="button"><span class="visually-hidden">1</span></button>
+          <button class="toggles__toggle toggles__toggle--active" type="button"><span class="visually-hidden">2</span></button>
+          <button class="toggles__toggle toggles__toggle--last" type="button"><span class="visually-hidden">3</span></button>
         </p>
       </section>
       <section class="feedback">

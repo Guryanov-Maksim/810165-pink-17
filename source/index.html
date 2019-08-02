@@ -45,7 +45,20 @@
         <div class="download__bg-container">
           <div class="download__wrapper">
             <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-            <img class="download__photo-example" src="http://placehold.it/111x197" alt="Пример фотографии, обработанной в приложении Pink на телефоне">
+            <picture>
+              <source
+                media="(min-width: 960px)"
+                srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x">
+              <source
+                media="(min-width: 660px)"
+                srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x"
+                >
+              <img class="download__photo-example" src="img/iphone-hand-mobile@1x.png"
+                srcset="img/iphone-hand-mobile@2x.png 2x"
+                width="258"
+                heigth="286"
+                alt="Пример фотографии, обработанной в приложении Pink на телефоне">
+            </picture>
           </div>
         </div>
         <div class="download__bg-wrapper">

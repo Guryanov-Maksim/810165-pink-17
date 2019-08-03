@@ -148,19 +148,22 @@
 .photos__link--panorama {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 320px;
   height: 137px;
+  margin-left: -160px;
   font: inherit;
 
   @media (min-width: @tablet-width) {
     width: 700px;
     height: 509px;
+    margin-left: -350px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
     height: 506px;
+    margin-left: -600px;
   }
 }
 
@@ -170,21 +173,26 @@
   top: 0;
   right: 20px;
   padding: 6px 20px;
+  font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: -1.4px;
+  letter-spacing: -0.7px;
   color: #ffffff;
   background: #d22856;
 
   @media (min-width: @tablet-width) {
     top: 57px;
-    right: 61px;
+    right: 40px;
   }
 
   @media (min-width: @desktop-width) {
     top: 54px;
-    right: 251px;
+    right: 131px;
   }
+}
+
+.photos__link img {
+  width: 100%;
 }
 
 .photos__user-name {

@@ -34,6 +34,37 @@
   margin-bottom: 37px;
 }
 
+.page-footer__logo-image {
+  width: 100%;
+  height: auto;
+  fill: #283645;
+  pointer-events: none;     //для EI11 состояния active у ссылки
+}
+
+.page-footer__logo:hover .page-footer__logo-image,
+.page-footer__logo:focus .page-footer__logo-image {
+  fill: #d22856;
+}
+
+.page-footer__logo:active .page-footer__logo-image {
+  opacity: 0.3;
+  fill: #283645;
+}
+
+.page-footer__logo-mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}
+
 .page-footer__list {
   display: flex;
   justify-content: space-between;

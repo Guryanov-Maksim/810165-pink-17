@@ -24,4 +24,14 @@
 
 .copyright__logo {
   fill: #d22856;
+  pointer-events: none;     //для EI11 состояния active у ссылки
+}
+
+.copyright__link:hover .copyright__logo {
+  fill: #283645;
+}
+
+.copyright__link:active .copyright__logo {
+  fill: #283645;
+  opacity: 0.3;
 }

@@ -34,4 +34,15 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
+gulp.task("copy", function () {
+  return gulp.src([
+  "source/fonts/**/*.{woff,woff2}",
+  "source/img/**",
+  "source/js/**"
+  ], {
+  base: "source"
+  })
+  .pipe(gulp.dest("build"));
+ });
+
 gulp.task("start", gulp.series("css", "server"));

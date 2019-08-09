@@ -26,6 +26,10 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    gulp.src("source/less/style.less")
+    .pipe(sourcemap.init())
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -143,7 +147,8 @@ gulp.task("build", gulp.series(
   "css",
   "sprite",
   // "sprite2",
-  "html"
+  "html",
+  "compress-js"
 ));
 
 gulp.task("start", gulp.series("build", "server"));

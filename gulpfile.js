@@ -27,16 +27,30 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
+    // .pipe(gulp.dest("build/css"))
+    // .src("source/less/style.less")
+    // .pipe(sourcemap.init())
+    // .pipe(csso())
+    // .pipe(rename("style.min.css"))
+    // .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    gulp.src("source/less/style.less")
+    .pipe(server.stream());
+});
+
+gulp.task("compress-css", function () {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
     .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
-
 // gulp.task("server", function () {
 //   server.init({
 //     server: "source/",
@@ -145,6 +159,7 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "compress-css",
   "sprite",
   // "sprite2",
   "html",

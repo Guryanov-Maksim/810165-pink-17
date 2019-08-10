@@ -3,15 +3,15 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  min-height: 199px;
+  min-height: 239px;
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    min-height: 372px;
+    min-height: 401px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 479px;
+    min-height: 521px;
   }
 }
 
@@ -19,15 +19,15 @@
   z-index: 2;
   width: 100%;
   min-width: 320px;
-  height: 195px;
+  height: 239px;
   border: none;
 
   @media (min-width: @tablet-width) {
-    height: 372px;
+    height: 401px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 479px;
+    height: 521px;
   }
 }
 
@@ -57,37 +57,17 @@
   &::after {
     position: absolute;
     content: "";
-    bottom: 80px;
-    left: 151px;
+    bottom: 70px;
+    left: 142px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: #d22856;
-
-    @media (min-width: @tablet-width) {
-      bottom: 282px;
-      left: 341px;
-    }
-
-    @media (min-width: @desktop-width) {
-      bottom: 410px;
-      left: 592px;
-    }
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    bottom: 70px;
-    left: 141px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: #ffffff;
+    border: 10px solid #ffffff;
 
     @media (min-width: @tablet-width) {
       bottom: 272px;
-      left: 331px;
+      left: 332px;
     }
 
     @media (min-width: @desktop-width) {
@@ -95,11 +75,37 @@
       left: 582px;
     }
   }
+
+  // &::before {
+  //   // z-index: 1;
+  //   position: absolute;
+  //   content: "";
+  //   bottom: 30px;
+  //   left: 141px;
+  //   width: 36px;
+  //   height: 36px;
+  //   border-radius: 50%;
+  //   background-color: #ffffff;
+
+  //   @media (min-width: @tablet-width) {
+  //     bottom: 272px;
+  //     left: 331px;
+  //   }
+
+  //   @media (min-width: @desktop-width) {
+  //     bottom: 400px;
+  //     left: 582px;
+  //   }
+  // }
 }
 
-.map__static {
-  transform: translateY(40px);
-}
+// .map__static {
+//   transform: translateY(40px);
+
+//   @media (min-width: @tablet-width) {
+//     transform: translateY(0);
+//   }
+// }
 
 // .map__wrapper picture {
 //   position: relative;

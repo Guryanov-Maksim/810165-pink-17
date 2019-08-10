@@ -162,6 +162,7 @@ gulp.task("build", gulp.series(
   "compress-css",
   "sprite",
   // "sprite2",
+  //не забыть включить images!!!!!!!!!!!
   "html",
   "compress-js"
 ));

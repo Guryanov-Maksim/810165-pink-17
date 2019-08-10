@@ -1,0 +1,133 @@
+.map {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 199px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 479px;
+  }
+}
+
+.map__interactive {
+  z-index: 2;
+  width: 100%;
+  min-width: 320px;
+  height: 195px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    height: 372px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 479px;
+  }
+}
+
+.map__wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 320px;
+  margin-left: -160px;
+  // margin: 0 auto;
+  // margin-top: -446px;
+  // font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    bottom: -127px ;
+    width: 700px;
+    margin-left: -350px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -197px;
+    width: 1200px;
+    margin-left: -600px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 80px;
+    left: 151px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #d22856;
+
+    @media (min-width: @tablet-width) {
+      bottom: 282px;
+      left: 341px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: 410px;
+      left: 592px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 70px;
+    left: 141px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    @media (min-width: @tablet-width) {
+      bottom: 272px;
+      left: 331px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: 400px;
+      left: 582px;
+    }
+  }
+}
+
+
+// .map__wrapper picture {
+//   position: relative;
+
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     bottom: 84px;
+//     left: 151px;
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 50%;
+//     background-color: #d22856;
+//   }
+
+//   &::before {
+//     position: absolute;
+//     content: "";
+//     bottom: 74px;
+//     left: 141px;
+//     width: 36px;
+//     height: 36px;
+//     border-radius: 50%;
+//     background-color: #ffffff;
+//   }
+// }
+
+// .map__static {
+//   z-index: -1;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   margin: 0 auto;
+// }

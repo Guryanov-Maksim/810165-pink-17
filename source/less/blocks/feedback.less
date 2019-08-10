@@ -1,5 +1,8 @@
 .feedback {
+  z-index: 3;
   position: relative;
+  padding-top: 42px;
+  background: #ffffff;
 
   &::after {
     position: absolute;
@@ -12,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
       // width: 1439px;
       bottom: -122px;
       height: 123px;

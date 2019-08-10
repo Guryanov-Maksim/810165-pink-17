@@ -38,14 +38,16 @@
 }
 
 .prices__table {
-  position: relative;
-  left: -280px;
+  // position: relative;
+  // left: -280px;
   display: flex;
   width: 100%;
   margin-bottom: 45px;
+  transform: translateX(-280px);
 
   @media (min-width: @tablet-width) {
-    position: static;
+    transform: translateX(0);
+    // position: static;
     margin-bottom: 69px;
   }
 

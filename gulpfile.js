@@ -15,8 +15,29 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 
 gulp.task("css", function () {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    // .pipe(gulp.dest("build/css"))
+    // .src("source/less/style.less")
+    // .pipe(sourcemap.init())
+    // .pipe(csso())
+    // .pipe(rename("style.min.css"))
+    // .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("compress-css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -30,7 +51,6 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
-
 // gulp.task("server", function () {
 //   server.init({
 //     server: "source/",
@@ -117,6 +137,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
@@ -124,13 +145,25 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task("compress-js", function () {
+  return gulp.src("source/js/script.js")
+    .pipe(uglify())
+    .pipe(rename(function (path) {
+      path.basename += ".min";
+      path.extname = ".js";
+    }))
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "compress-css",
   "sprite",
   // "sprite2",
-  "html"
+  "html",
+  "compress-js"
 ));
 
 gulp.task("start", gulp.series("build", "server"));

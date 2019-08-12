@@ -271,29 +271,53 @@
       <section class="app">
         <h2 class="visually-hidden">Приложение Pink в режиме online</h2>
         <p class="app__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-        <form class="app__form" method="post" action="https://echo.htmlacademy.ru">
-          <img class="app__image" src="http://placehold.it/280x374" alt="Ваше фото для обработки">
-          <div class="app__cut">
-            <button class="app__control-button app__control-button--cut app__control-button--active" type="button">
-              <span class="visually-hidden">Обрезка</span>
-            </button>
-            <input class="app__slide app__slide--active" type="range" min="1" max="100">
-          </div>
-          <div class="app__fill">
-            <button class="app__control-button app__control-button--fill" type="button">
-              <span class="visually-hidden">Заливка</span>
-            </button>
-            <input class="app__slide" type="range" min="1" max="100">
-          </div>
-          <div class="app__contrast">
-            <button class="app__control-button app__control-button--contrast" type="button">
-              <span class="visually-hidden">Контрастность</span>
-            </button>
-            <input class="app__slide" type="range" min="1" max="100">
-          </div>
-          <button class="app__button" type="submit">Запостить</button>
-          <button class="app__button" type="reset">Сбросить</button>
-        </form>
+        <div class="app__bg-wrapper">
+          <form class="app__form" method="post" action="https://echo.htmlacademy.ru">
+            <div class="app__left-column">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp, img/photo-road-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp, img/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-road-mobile@1x.webp, img/photo-road-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+                <img class="app__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Ваше фото для обработки">
+              </picture>
+            </div>
+            <div class="app__right-column">
+              <div class="app__control-panel">
+                <div class="app__control app__cut">
+                  <button class="app__control-button app__control-button--cut app__control-button--active" type="button">
+                    <svg class="app__control-image" width="48" height="48" focusable="false">
+                      <use xlink:href="#editor-crop-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Обрезка</span>
+                  </button>
+                  <input class="app__slide app__slide--active" type="range" min="1" max="100" value="86">
+                </div>
+                <div class="app__control app__fill">
+                  <button class="app__control-button app__control-button--fill" type="button">
+                    <svg class="app__control-image" width="48" height="48" focusable="false">
+                      <use xlink:href="#editor-fill-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Заливка</span>
+                  </button>
+                  <input class="app__slide" type="range" min="1" max="100">
+                </div>
+                <div class="app__control app__contrast">
+                  <button class="app__control-button app__control-button--contrast" type="button">
+                    <svg class="app__control-image" width="32" height="32" focusable="false">
+                      <use xlink:href="#editor-contrast-icon"></use>
+                    </svg>
+                    <span class="visually-hidden">Контрастность</span>
+                  </button>
+                  <input class="app__slide" type="range" min="1" max="100">
+                </div>
+              </div>
+              <button class="app__button oval-button" type="submit">Запостить</button>
+              <button class="app__button app__button--gray oval-button" type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="page-footer">

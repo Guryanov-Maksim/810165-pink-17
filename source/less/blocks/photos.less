@@ -30,6 +30,7 @@
   padding: 0 15px;
   line-height: 30px;
   text-align: center;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     padding: 0 25px;
@@ -209,13 +210,37 @@
   width: 100%;
 }
 
-.photos__user-name {
-  margin-left: 17px;
-  font-weight: bold;
-  font-style: normal;
+.photos__user-data {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 17px;
 
   @media (min-width: @tablet-width) {
+    max-width: 260px;
     margin-left: 27px;
+    padding: 0;
+  }
+}
+
+.photos__item--panorama .photos__user-data {
+  @media (min-width: @tablet-width) {
+    max-width: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 700px;
+  }
+}
+
+.photos__user-name {
+  // margin-left: 17px;
+  margin-right: 4px;
+  font-weight: bold;
+  font-style: normal;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    // margin-left: 27px;
   }
 }
 
@@ -223,6 +248,7 @@
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 .photos__item--panorama .photos__time {
@@ -236,6 +262,7 @@
   padding: 0 17px;
   margin: 0;
   margin-bottom: 9px;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
@@ -257,6 +284,7 @@
 
 .photos__like {
   position: relative;
+  max-width: 250px;
   margin-left: 17px;
   margin-right: auto;
   padding: 0;
@@ -268,8 +296,11 @@
   background: none;
   border: none;
   cursor: pointer;
+  word-wrap: break-word;
 
   @media (min-width: @tablet-width) {
+    align-self: flex-start;
+    max-width: 260px;
     margin: 0 27px;
     padding-left: 0;
     padding-right: 24px;
@@ -297,6 +328,7 @@
 .photos__item--panorama .photos__like {
   @media (min-width: @tablet-width) {
     order: 2;
+    max-width: 165px;
     margin-top: 0;
     margin-left: auto;
     margin-right: 27px;

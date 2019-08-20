@@ -12,6 +12,8 @@
 }
 
 .site-list__item {
+  display: flex;
+  justify-content: center;
   padding: 17px 10px 13px;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000000;
@@ -31,12 +33,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  max-width: 280px;
   font-size: 18px;
   font-weight: bold;
   line-height: 32px;
   color: #ffffff;
   text-transform: uppercase;
   background-color: @base-color;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    max-width: 600px;
+  }
 
   @media (min-width: @desktop-width) {
     font-weight: normal;

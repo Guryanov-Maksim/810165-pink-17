@@ -343,6 +343,7 @@
 .form-set__fieldset--contacts .form-set__input {
   @media (min-width: @tablet-width) {
     order: 1;
+    height: 28px;
   }
 }
 
@@ -396,10 +397,10 @@
     @media (min-width: @tablet-width) {
       position: absolute;
       content: "";
-      top: 2px;
-      right: 2px;
+      top: 1px;
+      right: 1px;
       width: 62px;
-      height: 59px;
+      height: 60px;
       background-color: #e5e5e5;
       background-repeat: no-repeat;
     }
@@ -416,6 +417,15 @@
 
   @media (min-width: @desktop-width) {
     max-width: 890px;
+  }
+}
+
+.form-set__input--tel + .form-set__label {
+  &::before {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/icon-phone.svg");
+      background-position: 21px 21px;
+    }
   }
 }
 

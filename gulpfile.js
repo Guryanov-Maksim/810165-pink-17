@@ -27,12 +27,6 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    // .pipe(gulp.dest("build/css"))
-    // .src("source/less/style.less")
-    // .pipe(sourcemap.init())
-    // .pipe(csso())
-    // .pipe(rename("style.min.css"))
-    // .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -51,18 +45,6 @@ gulp.task("compress-css", function () {
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
-// gulp.task("server", function () {
-//   server.init({
-//     server: "source/",
-//     notify: false,
-//     open: true,
-//     cors: true,
-//     ui: false
-//   });
-
-//   gulp.watch("source/less/**/*.less", gulp.series("css"));
-//   gulp.watch("source/*.html").on("change", server.reload);
-// });
 
 gulp.task("server", function () {
   server.init({
@@ -86,7 +68,6 @@ gulp.task("refresh", function (done) {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
     "source/js/**"
   ], {
     base: "source"
@@ -112,26 +93,12 @@ gulp.task("webp", function () {
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/*{-logo.svg,-icon.svg}")
-  // return gulp.src("source/img/*-icon.svg")
     .pipe(svgstore({
       inlineSvg: true
       }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
-
-
-    // .pipe(rename("header-pink-logo.svg"))
-    // .pipe(gulp.dest("source/img"));
 });
-
-// gulp.task("sprite2", function () {
-//   return gulp.src("source/img/*-logo.svg")
-//     .pipe(svgstore({
-//       inlineSvg: true
-//       }))
-//     .pipe(rename("sprite.svg"))
-//     .pipe(gulp.dest("build/img"));
-// });
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
@@ -162,8 +129,8 @@ gulp.task("build", gulp.series(
   "css",
   "compress-css",
   "sprite",
-  // "sprite2",
-  //не забыть включить images!!!!!!!!!!!
+  "images",
+  "webp",
   "html",
   "compress-js"
 ));

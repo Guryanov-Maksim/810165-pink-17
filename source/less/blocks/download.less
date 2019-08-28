@@ -191,19 +191,37 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 49px;
+    margin-bottom: 58px;
   }
 }
 
 .download__item {
+  &:nth-child(1) {
+    width: 47px;
+    height: 56px;
+  }
+
   &:nth-child(2) {
+    width: 43px;
+    height: 47px;
     margin-top: 7px;
   }
 
   &:nth-child(3) {
+    width: 44px;
+    height: 41px;
     margin-top: 11px;
   }
 }
+
+// .download__link {
+//   display: flex;
+// }
+
+// .download__item:nth-child(1) .download__link {
+//   width: 47px;
+//   height: 56px;
+// }
 
 .download__available-os {
   max-width: 280px;

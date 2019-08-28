@@ -22,7 +22,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 94px;
+    margin-bottom: 93px;
     padding-top: 68px;
     padding-bottom: 140px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
@@ -51,6 +51,12 @@
 
   @media (min-width: 2560px) {
     background-size: cover;
+  }
+
+  &--less-padding {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      padding-bottom: 79px;
+    }
   }
 }
 
@@ -90,6 +96,16 @@
 
   @media (min-width: 2560px) {
     background-size: cover;
+  }
+
+  &--less-padding {
+    @media (min-width: @tablet-width) {
+      padding-bottom: 79px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 101px;
+    }
   }
 }
 

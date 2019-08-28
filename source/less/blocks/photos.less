@@ -1,5 +1,5 @@
 .photos {
-  margin-bottom: 19px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 45px;
@@ -149,13 +149,13 @@
   @media (min-width: @tablet-width) {
     width: 300px;
     height: 300px;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     margin-right: 0;
   }
 
   @media (min-width: @desktop-width) {
     height: 400px;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
   }
 }
 
@@ -299,7 +299,6 @@
   word-wrap: break-word;
 
   @media (min-width: @tablet-width) {
-    align-self: flex-start;
     max-width: 260px;
     margin: 0 27px;
     padding-left: 0;
@@ -320,7 +319,7 @@
 
     @media (min-width: @tablet-width) {
       left: auto;
-      right: 6px;
+      right: 4px;
     }
   }
 }
@@ -341,7 +340,11 @@
 
   &::before {
     @media (min-width: @tablet-width) {
-      right: 3px;
+      right: 1px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 4px;
     }
   }
 }

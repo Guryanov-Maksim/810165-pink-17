@@ -5,6 +5,10 @@
   background: #ffffff;
   word-break: break-word;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -13,7 +17,7 @@
     margin-left: -600px;
     width: 1200px;
     height: 124px;
-    background-image: url(../img/bg-triangle-white-footer.svg);
+    background-image: url("../img/bg-triangle-white-footer.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -68,31 +72,22 @@
 }
 
 .feedback__contacts {
-  margin-bottom: 18px;
+  z-index: 2;
+  margin-bottom: 0;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
   text-align: center;
 
-
-  z-index: 2;
-
-  margin-bottom: 0;
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // margin-bottom: 29px;
-
-
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     flex-wrap: nowrap;
-    // margin-bottom: 23px;
-
     margin-bottom: 0;
   }
 }
@@ -104,16 +99,11 @@
   @media (min-width: @tablet-width) {
     width: 300px;
     margin-bottom: 45px;
-
-
-
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
-
-
     margin-bottom: 0;
   }
 }

@@ -25,10 +25,7 @@
   order: 2;
   max-width: 280px;     //IE11
   margin: 0;
-
   margin-bottom: 33px;
-
-
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
@@ -37,7 +34,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: 620px;     //IE11
-    margin-bottom: 46px;
+    margin-bottom: 48px;
     padding: 0 30px;
     font-size: 40px;
     line-height: 48px;
@@ -112,7 +109,7 @@
     .desktop-wrapper();
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 346px;
+    padding-top: 344px;
     min-height: 0;
   }
 }
@@ -194,14 +191,12 @@
   }
 }
 
-.advantages__discription br {
-  display: none;
-
+.research__title .advantages__line-break {
   @media (min-width: @tablet-width) {
     display: block;
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
+    display: inline;
   }
 }

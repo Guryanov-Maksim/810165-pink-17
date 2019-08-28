@@ -45,7 +45,7 @@
 
     @media (min-width: @tablet-width) {
       order: 3;
-      margin-bottom: 54px;
+      margin-bottom: 56px;
       background-color: transparent;
     }
 
@@ -55,7 +55,7 @@
   }
 
   &--app {
-    margin-bottom: 38px;
+    margin-bottom: 37px;
     background-color: @gray;
 
     @media (min-width: @tablet-width) {
@@ -105,8 +105,9 @@
       margin-bottom: 67px;
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       width: 100%;
+      margin-bottom: 64px;
     }
   }
 }
@@ -134,13 +135,15 @@
 }
 
 .form-set__fieldset--contacts .form-set__inner {
+  margin-bottom: 42px;
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 22px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: @desktop-width) {
     flex-wrap: nowrap;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 }
 
@@ -154,6 +157,10 @@
 }
 
 .form-set__bg-wrapper--achivements .form-set__inner {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 57px;
   }
@@ -213,7 +220,7 @@
   margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -383,10 +390,13 @@
 // }
 
 .form-set__fieldset--contacts .form-set__label {
+  padding-bottom: 5px;
+
   @media (min-width: @tablet-width) {
     order: 2;
-    padding-top: 10px;
     margin-left: 20px;
+    padding-top: 11px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -413,6 +423,8 @@
 
   @media (min-width: @tablet-width) {
     max-width: 570px;
+    margin-left: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -444,13 +456,6 @@
     @media (min-width: @tablet-width) {
       background-color: @base-color;
     }
-  }
-}
-
-.form-set__fieldset--feedback .form-set__label {
-  @media (min-width: @tablet-width) {
-    margin-left: 0;
-    padding-bottom: 0;
   }
 }
 
@@ -629,9 +634,6 @@
   border-radius: 2px;
   cursor: pointer;
   word-break: break-word;
-  box-sizing: border-box;
-
-
 
   @media (min-width: @tablet-width) {
     order: 5;

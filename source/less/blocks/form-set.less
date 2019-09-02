@@ -487,10 +487,15 @@
 }
 
 .form-set__checkbox:hover + .form-set__label,
-.form-set__checkbox:focus + .form-set__label,
 .form-set__checkbox + .form-set__label:hover {
   &::before {
     border-color: @base-color;
+  }
+}
+
+.form-set__checkbox:focus + .form-set__label {
+  &::before {
+    outline: 2px solid #4D90FE;
   }
 }
 
@@ -572,10 +577,15 @@
   }
 }
 
-.form-set__radio:active + .form-set__label,
-.form-set__radio:focus + .form-set__label {
+.form-set__radio:active + .form-set__label {
   &::before {
     border-color: @red;
+  }
+}
+
+.form-set__radio:focus + .form-set__label {
+  &::before {
+    outline: 2px solid #4D90FE;
   }
 }
 

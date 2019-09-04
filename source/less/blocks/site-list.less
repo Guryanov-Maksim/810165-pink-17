@@ -28,6 +28,12 @@
   &:first-child {
     margin: 0;
   }
+
+  &:last-child {
+    @media (min-width: @tablet-width) {
+      padding-bottom: 14px;
+    }
+  }
 }
 
 .site-list__link {

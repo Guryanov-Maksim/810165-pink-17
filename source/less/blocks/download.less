@@ -55,7 +55,7 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 23px;
   padding-bottom: 285px;
 
   @media (min-width: @tablet-width) {
@@ -64,12 +64,24 @@
     width: 620px;
     margin: 0 auto;
     padding: 0 20px;
-    padding-top: 93px;
+    padding-top: 92px;
     background: transparent;
   }
 
   @media (min-width: @desktop-width) {
     .desktop-wrapper();
+    padding-top: 108px;
+  }
+}
+
+.page-header--closed-menu  + .page-main .download__wrapper {
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-top: 108px;
   }
 }
@@ -128,7 +140,7 @@
 }
 
 .download__bg-wrapper {
-  padding-top: 28px;
+  padding-top: 27px;
   background: #1d2631;
 
   @media (min-width: @tablet-width) {

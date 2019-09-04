@@ -1,12 +1,12 @@
 .photos {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 }
 
@@ -21,7 +21,7 @@
 
   @media (min-width: @desktop-width) {
     .desktop-wrapper();
-    margin-bottom: 87px;
+    margin-bottom: 89px;
   }
 }
 
@@ -73,7 +73,11 @@
   &--panorama {
     @media (min-width: @tablet-width) {
       width: 100%;
-      margin-bottom: 51px;
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 50px;
     }
   }
 
@@ -100,7 +104,7 @@
     flex-direction: row;
     max-width: 620px;
     min-height: auto;
-    padding-bottom: 25px;
+    padding-bottom: 19px;
   }
 
   @media (min-width: @tablet-width) {
@@ -117,7 +121,7 @@
   flex-wrap: wrap;
   max-width: 280px;       //EI11
   margin: 0;
-  padding-bottom: 21px;
+  padding-bottom: 19px;
   background: @gray;
 
   @media (min-width: @tablet-width) {
@@ -234,10 +238,15 @@
 }
 
 .photos__time {
+  margin-top: 1px;
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
   word-break: break-word;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .photos__item--panorama .photos__time {
@@ -250,7 +259,7 @@
   width: 100%;
   padding: 0 17px;
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   word-break: break-word;
 
   @media (min-width: @tablet-width) {
@@ -298,7 +307,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 8px;
+    top: 6px;
     left: 0;
     width: 14px;
     height: 14px;
@@ -335,6 +344,7 @@
 
     @media (min-width: @desktop-width) {
       right: 4px;
+      top: 4px;
     }
   }
 }
